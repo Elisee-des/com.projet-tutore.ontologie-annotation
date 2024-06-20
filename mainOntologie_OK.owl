@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.example.org/cassacadiseases.owl"
+         xmlns="http://www.example.org/cassacadiseases.owl#">
+
+<owl:Ontology rdf:about="http://www.example.org/cassacadiseases.owl"/>
+
+<owl:DatatypeProperty rdf:about="#has_creation_date">
+  <rdfs:domain rdf:resource="#Dataset"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_url">
+  <rdfs:domain rdf:resource="#Dataset"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_size">
+  <rdfs:domain rdf:resource="#Dataset"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:domain rdf:resource="#Image"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_author">
+  <rdfs:domain rdf:resource="#Dataset"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_area">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_perimeter">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_width">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_height">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_normalized_area">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_normalized_perimeter">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_aspect_ratio">
+  <rdfs:domain rdf:resource="#Contour"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_hue_mean">
+  <rdfs:domain rdf:resource="#Color"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_hue_std">
+  <rdfs:domain rdf:resource="#Color"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_saturation_mean">
+  <rdfs:domain rdf:resource="#Color"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_saturation_std">
+  <rdfs:domain rdf:resource="#Color"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_value_mean">
+  <rdfs:domain rdf:resource="#Color"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_value_std">
+  <rdfs:domain rdf:resource="#Color"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_contrast">
+  <rdfs:domain rdf:resource="#Texture"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_dissimilarity">
+  <rdfs:domain rdf:resource="#Texture"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_energy">
+  <rdfs:domain rdf:resource="#Texture"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_homogeneity">
+  <rdfs:domain rdf:resource="#Texture"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_correlation">
+  <rdfs:domain rdf:resource="#Texture"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Dataset">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of associated data.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Image">
+  <rdfs:subClassOf rdf:resource="#Dataset"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Class representing images.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Contour">
+  <rdfs:subClassOf rdf:resource="#Image"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contour</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The contour characteristics of an image, such as area, perimeter, etc.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Color">
+  <rdfs:subClassOf rdf:resource="#Image"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Color</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The color characteristics of an image, such as hue, saturation, and value.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Texture">
+  <rdfs:subClassOf rdf:resource="#Image"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texture</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The texture characteristics of an image, such as contrast, dissimilarity, etc.</rdfs:comment>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#1.jpg">
+  <rdf:type rdf:resource="#Image"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example Image 1</rdfs:label>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is an example image used for testing annotations.</rdfs:comment>
+  <has_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20295.5</has_area>
+  <has_perimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1650.9717726707458</has_perimeter>
+  <has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">177</has_width>
+  <has_height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">212</has_height>
+  <has_normalized_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.30968475341796875</has_normalized_area>
+  <has_normalized_perimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.6122771217487752</has_normalized_perimeter>
+  <has_aspect_ratio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8349056603773585</has_aspect_ratio>
+  <has_hue_mean rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.005584716796875</has_hue_mean>
+  <has_hue_std rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.12871508206654</has_hue_std>
+  <has_saturation_mean rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">146.55633544921875</has_saturation_mean>
+  <has_saturation_std rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">68.36625858305607</has_saturation_std>
+  <has_value_mean rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">139.08096313476562</has_value_mean>
+  <has_value_std rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61.042766201790954</has_value_std>
+  <has_contrast rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">607.0579197304468</has_contrast>
+  <has_dissimilarity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.911473651958886</has_dissimilarity>
+  <has_energy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.010779307898478538</has_energy>
+  <has_homogeneity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.11088725504503322</has_homogeneity>
+  <has_correlation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9042696831435298</has_correlation>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
